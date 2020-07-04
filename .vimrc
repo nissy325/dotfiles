@@ -41,9 +41,15 @@ set smarttab
 "swapファイルを作成しない
 set noswapfile
 imap <C-j> <esc>
+"mapping"
+noremap <Space><CR> o<ESC> 
+noremap <C-w>l sh
+"escをjjにマッピング
+inoremap <silent> jj <ESC>
 "vimでyankしたテキストをクリップボードに格納する
 set clipboard=unnamed
 set backspace=indent,eol,start
+set path+=$PWD/**
 call plug#begin('~/.vim/plugged')
 "ここからプラグインを書く"
 Plug 'scrooloose/nerdtree'
