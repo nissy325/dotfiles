@@ -43,13 +43,16 @@ RPROMPT='`rprompt-git-current-branch`'
 
 TIMEFMT=$'\n\n========================\nProgram : %J\nCPU     : %P\nuser    : %*Us\nsystem  : %*Ss\ntotal   : %*Es\n========================\n'
 
-alias d=‘docker’
-alias dc=‘docker-compose’
-alias dcnt=‘docker container’
-alias dcur=‘docker container ls -f status=running -l -q’
-alias dexec=‘docker container exec -it $(dcur)’
-alias dimg=‘docker image’
-alias drun=‘docker container run —rm -d’
-alias drunit=‘docker container run —rm -it’
-alias dstop=‘docker container stop $(dcur)’
+alias d='docker'
+alias dc='docker-compose'
+alias -g diff-deve='diff origin/develop..HEAD'
+alias ctags="`brew --prefix`/bin/ctags"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+export PATH="/usr/local/go/bin:$PATH"
+export GOPATH="$HOME/go"
+
+export PATH="/usr/local/opt/m4/bin:$PATH"
+eval "$(rbenv init -)"
+zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+fpath=(~/.zsh $fpath)
+autoload -Uz compinit && compinit
