@@ -1,0 +1,30 @@
+{
+    "recommendations": [
+        "hridoy.rails-snippets",
+        "aki77.rails-db-schema",
+        "castwide.solargraph",
+        "rebornix.Ruby",
+      ],
+    "vim.vimrc.enable": true,
+    "vim.vimrc.path": "~/.vimrc",
+    "files.insertFinalNewline": true,
+    "vim.useSystemClipboard": true,
+    "ruby.intellisense": "rubyLocate",
+    // 基本的な言語機能のサポート
+    "ruby.useLanguageServer": true,
+    // Formatで使用するツールを`bundle exec`で実行するかどうか
+    // ここではグローバルにインストールしたGemを使うのでfalseに指定
+    "ruby.useBundler": true,
+    // `Format Document`で使用するフォーマッターにrubocopを指定
+    "ruby.format": "rubocop",
+    // Linterにrubocopを指定
+    "ruby.lint": {
+        "rubocop": {
+            "useBundler": false
+        }
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.minimap.enabled": false,
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.enableMultiLinePasteWarning": false
+}

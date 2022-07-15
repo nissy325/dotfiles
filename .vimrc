@@ -66,7 +66,7 @@ set clipboard=unnamed
 set backspace=indent,eol,start
 set path+=$PWD/**
 "grepで指定したディレクトリを検索しない"
-set grepprg=grep\ -nr\ $*\ --exclude-dir={.git,log,tmp}\ --exclude=.tags\ /dev/null
+set grepprg=grep\ -nr\ $*\ --exclude-dir={.git,log,tmp,coverage,tags,public,node_modules}\ --exclude=.tags\ /dev/null
 call plug#begin('~/.vim/plugged')
 
 "ここからプラグインを書く"
